@@ -14,6 +14,6 @@ after_success:
   - >
     if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
       docker images
-      echo $DOCKER_PASS | docker login --username $DOCKER_USER --password-stdin
+      echo $DOCKER_PASS | docker login --username $DOCKER_USER --password-stdin docker.pkg.github.com
       docker push $DOCKER_USER/ipxe-buildweb:latest
     fi
