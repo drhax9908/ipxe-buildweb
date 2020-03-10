@@ -59,7 +59,11 @@ EOF
 
 cat << EOF > /etc/apache2/mods-enabled/fcgid.conf
 <IfModule mod_fcgid.c>
-    FcgidConnectTimeout 20
+    FcgidConnectTimeout 120
+    IdelTimeout 3600
+    BuysTimeout 300
+    IPCCommTimeout 360
+    MaxRequestLen 15720640
     <IfModule mod_mime.c>
         AddHandler fcgid-script .fcgi
     </IfModule>
