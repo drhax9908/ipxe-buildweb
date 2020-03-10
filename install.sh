@@ -60,7 +60,7 @@ EOF
 cat << EOF > /etc/apache2/mods-enabled/fcgid.conf
 <IfModule mod_fcgid.c>
     FcgidConnectTimeout 120
-    IdelTimeout 3600
+    IdleTimeout 3600
     BuysTimeout 300
     IPCCommTimeout 360
     MaxRequestLen 15720640
